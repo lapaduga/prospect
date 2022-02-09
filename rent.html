@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="apple-touch-icon" sizes="57x57" href="template/images/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="template/images/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="template/images/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="template/images/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="template/images/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="template/images/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="template/images/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="template/images/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="template/images/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="template/images/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="template/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="template/images/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="template/images/favicon-16x16.png">
+	<link rel="manifest" href="template/images/manifest.json">
+	<meta name="msapplication-TileColor" content="#00A0DC">
+	<meta name="msapplication-TileImage" content="template/images/ms-icon-144x144.png">
+	<meta name="theme-color" content="#00A0DC">
+	<link rel="stylesheet" href="template/styles/style.css">
+	<title>Поиск объектов - ООО "Проспект"</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header lock-padding">
+			<div class="header__container container">
+				<div class="header__body"> <a class="header__logo logo" href="index.html">
+						<div class="logo__image"><img src="template/images/logo.svg" alt=""></div>
+						<div class="logo__text"><img src="template/images/logo-text.svg" alt=""></div>
+					</a>
+					<div class="header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li> <a class="menu__link" href="about.html">О компании</a><span class="menu__arrow icons-arrow"></span>
+									<ul class="menu__sub-list">
+										<li> <a class="menu__sub-link" href="#">История</a></li>
+										<li> <a class="menu__sub-link" href="#">Компетенции</a></li>
+										<li> <a class="menu__sub-link" href="#">Отличительные особенности работы</a></li>
+										<li> <a class="menu__sub-link" href="#">Якорные арендаторы</a></li>
+										<li> <a class="menu__sub-link" href="#">Объекты</a></li>
+										<li> <a class="menu__sub-link" href="#">Управляющая компания ООО «Содействие»</a></li>
+									</ul>
+								</li>
+								<li> <a class="menu__link" href="news.html">Новости</a><span class="menu__arrow icons-arrow"></span>
+									<ul class="menu__sub-list">
+										<li> <a class="menu__sub-link" href="#">Новости и аналитика ООО "Проспект"</a></li>
+										<li> <a class="menu__sub-link" href="#">Полезные статьи</a></li>
+										<li> <a class="menu__sub-link" href="#">Активности</a></li>
+										<li> <a class="menu__sub-link" href="#">Мероприятия</a></li>
+									</ul>
+								</li>
+								<li> <a class="menu__link" href="rent.html">Арендаторам</a></li>
+								<li> <a class="menu__link" href="contacts.html">Контакты</a></li>
+							</ul><a class="menu__request btn btn--blue popup-link" href="#popup-request">Оставить заявку</a>
+						</nav>
+					</div><a class="header__phone" href="tel:+73512190000"><span class="icons-phone"></span><span>+7 351
+							219-00-00</span></a><a class="header__btn btn btn--blue popup-link" href="#popup-request">Оставить
+						заявку</a>
+					<div class="header__burger"><span></span></div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<section class="bar">
+				<div class="bar__container container">
+					<div class="bar__body">
+						<div class="bar__breadcrumbs breadcrumbs">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item"> <a class="breadcrumbs__link" href="index.html">Главная</a></li>
+								<li class="breadcrumbs__item"> <span class="breadcrumbs__span">Объекты в аренду</span></li>
+							</ul>
+						</div>
+						<h2 class="bar__subtitle subtitle">Объекты в аренду</h2>
+					</div>
+				</div>
+			</section>
+			<div class="rent">
+				<div class="rent__container container">
+					<div class="rent__body">
+						<div class="rent__tabs tabs">
+							<div class="tabs__triggers"> <a class="tabs__trigger" href="#objects">Объекты в аренду</a><a
+									class="tabs__trigger" href="#commercial">Реклама в торговых комплексах</a><a class="tabs__trigger"
+									href="#managers">Менеджеры проектов</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="tabs__content">
+					<div class="tabs__item item-tab" id="objects">
+						<div class="item-tab__container container">
+							<div class="item-tab__body">
+								<div class="item-tab__filter filter">
+									<div class="filter__inputs">
+										<label class="filter__label"><span>Адрес объекта</span>
+											<div class="filter__select-wrap">
+												<select class="filter__select" id="address-select" name="address-select">
+													<option value="val01">2-ая Базовая ул., д.43</option>
+													<option value="val02">Бажова ул., д. 80</option>
+													<option value="val03">Бугурусланская ул., д, 64</option>
+													<option value="val04">Гагарина ул, 35</option>
+													<option value="val05">Гагарина ул., д.10</option>
+													<option value="val06">Горького ул., д. 60</option>
+												</select><span class="icons-arrow"></span>
+											</div>
+										</label>
+										<label class="filter__label"><span>Район</span>
+											<div class="filter__select-wrap">
+												<select class="filter__select" id="area-select" name="area-select">
+													<option value="val01">Центральный</option>
+													<option value="val02">Советский</option>
+													<option value="val03">Курчатовский</option>
+													<option value="val04">Калининский</option>
+													<option value="val05">Ленинский</option>
+													<option value="val06">Металлургический</option>
+												</select><span class="icons-arrow"></span>
+											</div>
+										</label>
+										<div class="filter__label"><span>Площадь, кв. м</span>
+											<div class="filter__buttons">
+												<button class="filter__check-btn" type="button" data-square="1">1-5</button>
+												<button class="filter__check-btn" type="button" data-square="2">6-10</button>
+												<button class="filter__check-btn" type="button" data-square="3">11-30</button>
+												<button class="filter__check-btn" type="button" data-square="4">31-50</button>
+												<button class="filter__check-btn" type="button" data-square="5">51-100</button>
+												<button class="filter__check-btn" type="button" data-square="6">более 100</button>
+											</div>
+										</div>
+									</div>
+									<div class="filter__bottom">
+										<div class="filter__checkbox checkbox">
+											<input class="checkbox__input" type="checkbox" name="free-square" id="free-square">
+											<label class="checkbox__label" for="free-square" tabindex="0">Найти все свободные площади</label>
+										</div><a class="filter__print icons-printer" href="#"> <span>Распечатать список
+												объектов</span></a><a class="filter__reset" href="#">сбросить фильтры</a>
+										<button class="filter__search btn btn--blue">найти</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item-tab__map map" id="map-objects">
+							<div class="map__body">
+								<div class="map__panel">
+									<div class="map__title">Все объекты</div>
+									<ul class="map__list">
+										<li class="map__item"> <a class="map__link" href="#map-commercial"
+												data-latitude="55.159608119492844" data-longitude="61.40261080259067">
+												<div class="map__number">1.</div>
+												<div class="map__info">
+													<div class="map__address">Сан-Франциско</div>
+													<div class="map__heading">Мост «Золотые Ворота»</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial" data-latitude="55.14947512710992"
+												data-longitude="61.38686681941258">
+												<div class="map__number">2.</div>
+												<div class="map__info">
+													<div class="map__address">2-ая Базовая ул., д.43</div>
+													<div class="map__heading">Торговое помещение</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial" data-latitude="55.15970477569889"
+												data-longitude="61.398976150848384">
+												<div class="map__number">3.</div>
+												<div class="map__info">
+													<div class="map__address">ул. Витебская, 4</div>
+													<div class="map__heading">ТК "Железнодорожный"</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial"
+												data-latitude="55.161093017142306" data-longitude="61.39565021166993">
+												<div class="map__number">4.</div>
+												<div class="map__info">
+													<div class="map__address">Где-то в степи</div>
+													<div class="map__heading">ТРЦ "Чугунно-металло-челябинско-прокатный"</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial" data-latitude="55.16292345600203"
+												data-longitude="61.39852553973386">
+												<div class="map__number">5.</div>
+												<div class="map__info">
+													<div class="map__address">Переулок Скромности</div>
+													<div class="map__heading">ТК "Никитинский"</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial"
+												data-latitude="55.164766094448176" data-longitude="61.40442639956667">
+												<div class="map__number">6.</div>
+												<div class="map__info">
+													<div class="map__address">Улица Роз</div>
+													<div class="map__heading">ТРК "Победа"</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial"
+												data-latitude="55.165048624781235" data-longitude="61.39507085452273">
+												<div class="map__number">7.</div>
+												<div class="map__info">
+													<div class="map__address">Молдавская, 2</div>
+													<div class="map__heading">ТРК "Фокус"</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial"
+												data-latitude="55.168193174490604" data-longitude="61.401958767272944">
+												<div class="map__number">8.</div>
+												<div class="map__info">
+													<div class="map__address">5 декабря, 100</div>
+													<div class="map__heading">Киоск на улице</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial" data-latitude="55.16691573121301"
+												data-longitude="61.4115503467102">
+												<div class="map__number">9.</div>
+												<div class="map__info">
+													<div class="map__address">Северо-Крымская, 20</div>
+													<div class="map__heading">Торговая площадь в ТРЦ "Родник"</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial"
+												data-latitude="55.165896203716315" data-longitude="61.41410380969239">
+												<div class="map__number">10.</div>
+												<div class="map__info">
+													<div class="map__address">Васенко, 23</div>
+													<div class="map__heading">Дом Быта</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial" data-latitude="55.15409541039871"
+												data-longitude="61.4060378729943">
+												<div class="map__number">11.</div>
+												<div class="map__info">
+													<div class="map__address">Кое-где</div>
+													<div class="map__heading">Еще что-то там</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial"
+												data-latitude="55.147631779013594" data-longitude="61.381459486038565">
+												<div class="map__number">12.</div>
+												<div class="map__info">
+													<div class="map__address">Во глубине сибирских руд</div>
+													<div class="map__heading">Последний пункт недвиимости</div>
+												</div>
+											</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tabs__item item-tab" id="commercial">
+						<div class="item-tab__container container">
+							<div class="item-tab__body">
+								<div class="item-tab__filter filter">
+									<div class="filter__inputs">
+										<label class="filter__label"><span>Адрес объекта</span>
+											<div class="filter__select-wrap">
+												<select class="filter__select" id="commercial-address-select" name="commercial-address-select">
+													<option value="val01">2-ая Базовая ул., д.43</option>
+													<option value="val02">Бажова ул., д. 80</option>
+													<option value="val03">Бугурусланская ул., д, 64</option>
+													<option value="val04">Гагарина ул, 35</option>
+													<option value="val05">Гагарина ул., д.10</option>
+													<option value="val06">Горького ул., д. 60</option>
+												</select><span class="icons-arrow"></span>
+											</div>
+										</label>
+									</div>
+									<div class="filter__check-group">
+										<div class="filter__group-label">Наружна реклама</div>
+										<div class="filter__boxes">
+											<div class="filter__checkbox checkbox">
+												<input class="checkbox__input" type="checkbox" name="banner" id="banner">
+												<label class="checkbox__label" for="banner" tabindex="0">баннеры</label>
+											</div>
+											<div class="filter__checkbox checkbox">
+												<input class="checkbox__input" type="checkbox" name="lightbox" id="lightbox">
+												<label class="checkbox__label" for="lightbox" tabindex="0">световые короба</label>
+											</div>
+										</div>
+									</div>
+									<div class="filter__check-group">
+										<div class="filter__group-label">Реклама в интерьере</div>
+										<div class="filter__boxes">
+											<div class="filter__checkbox checkbox">
+												<input class="checkbox__input" type="checkbox" name="audio" id="audio">
+												<label class="checkbox__label" for="audio" tabindex="0">аудиореклама</label>
+											</div>
+											<div class="filter__checkbox checkbox">
+												<input class="checkbox__input" type="checkbox" name="booklet" id="booklet">
+												<label class="checkbox__label" for="booklet" tabindex="0">буклетницы</label>
+											</div>
+											<div class="filter__checkbox checkbox">
+												<input class="checkbox__input" type="checkbox" name="floor-sticker" id="floor-sticker">
+												<label class="checkbox__label" for="floor-sticker" tabindex="0">наклейки напольные</label>
+											</div>
+											<div class="filter__checkbox checkbox">
+												<input class="checkbox__input" type="checkbox" name="promotion" id="promotion">
+												<label class="checkbox__label" for="promotion" tabindex="0">промоакции</label>
+											</div>
+											<div class="filter__checkbox checkbox">
+												<input class="checkbox__input" type="checkbox" name="advert-panel" id="advert-panel">
+												<label class="checkbox__label" for="advert-panel" tabindex="0">рекламное панно</label>
+											</div>
+										</div>
+									</div>
+									<div class="filter__bottom"><a class="filter__reset" href="#">сбросить фильтры</a>
+										<button class="filter__search btn btn--blue">найти</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item-tab__map map" id="map-commercial">
+							<div class="map__body">
+								<div class="map__panel">
+									<div class="map__title">Все объекты</div>
+									<ul class="map__list">
+										<li class="map__item"> <a class="map__link" href="#map-commercial"
+												data-latitude="55.159608119492844" data-longitude="61.40261080259067">
+												<div class="map__number">1.</div>
+												<div class="map__info">
+													<div class="map__address">Сан-Франциско</div>
+													<div class="map__heading">Мост «Золотые Ворота»</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial" data-latitude="55.14947512710992"
+												data-longitude="61.38686681941258">
+												<div class="map__number">2.</div>
+												<div class="map__info">
+													<div class="map__address">2-ая Базовая ул., д.43</div>
+													<div class="map__heading">Торговое помещение</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial" data-latitude="55.15970477569889"
+												data-longitude="61.398976150848384">
+												<div class="map__number">3.</div>
+												<div class="map__info">
+													<div class="map__address">ул. Витебская, 4</div>
+													<div class="map__heading">ТК "Железнодорожный"</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial"
+												data-latitude="55.161093017142306" data-longitude="61.39565021166993">
+												<div class="map__number">4.</div>
+												<div class="map__info">
+													<div class="map__address">Где-то в степи</div>
+													<div class="map__heading">ТРЦ "Чугунно-металло-челябинско-прокатный"</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial" data-latitude="55.16292345600203"
+												data-longitude="61.39852553973386">
+												<div class="map__number">5.</div>
+												<div class="map__info">
+													<div class="map__address">Переулок Скромности</div>
+													<div class="map__heading">ТК "Никитинский"</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial"
+												data-latitude="55.164766094448176" data-longitude="61.40442639956667">
+												<div class="map__number">6.</div>
+												<div class="map__info">
+													<div class="map__address">Улица Роз</div>
+													<div class="map__heading">ТРК "Победа"</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial"
+												data-latitude="55.165048624781235" data-longitude="61.39507085452273">
+												<div class="map__number">7.</div>
+												<div class="map__info">
+													<div class="map__address">Молдавская, 2</div>
+													<div class="map__heading">ТРК "Фокус"</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial"
+												data-latitude="55.168193174490604" data-longitude="61.401958767272944">
+												<div class="map__number">8.</div>
+												<div class="map__info">
+													<div class="map__address">5 декабря, 100</div>
+													<div class="map__heading">Киоск на улице</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial" data-latitude="55.16691573121301"
+												data-longitude="61.4115503467102">
+												<div class="map__number">9.</div>
+												<div class="map__info">
+													<div class="map__address">Северо-Крымская, 20</div>
+													<div class="map__heading">Торговая площадь в ТРЦ "Родник"</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial"
+												data-latitude="55.165896203716315" data-longitude="61.41410380969239">
+												<div class="map__number">10.</div>
+												<div class="map__info">
+													<div class="map__address">Васенко, 23</div>
+													<div class="map__heading">Дом Быта</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial" data-latitude="55.15409541039871"
+												data-longitude="61.4060378729943">
+												<div class="map__number">11.</div>
+												<div class="map__info">
+													<div class="map__address">Кое-где</div>
+													<div class="map__heading">Еще что-то там</div>
+												</div>
+											</a></li>
+										<li class="map__item"> <a class="map__link" href="#map-commercial"
+												data-latitude="55.147631779013594" data-longitude="61.381459486038565">
+												<div class="map__number">12.</div>
+												<div class="map__info">
+													<div class="map__address">Во глубине сибирских руд</div>
+													<div class="map__heading">Последний пункт недвиимости</div>
+												</div>
+											</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tabs__item item-tab" id="managers">
+						<div class="item-tab__container container">
+							<div class="item-tab__body">
+								<div class="item-tab__unit">
+									<div class="item-tab__image"> <img src="template/images/man01.webp" alt=""></div>
+									<div class="item-tab__info">
+										<div class="item-tab__head">
+											<div class="item-tab__name">Анатолий Калинкин</div><a class="item-tab__mail icons-mail"
+												href="mailto:a.kalinkin@tk-prospect.ru"> <span>a.kalinkin@tk-prospect.ru</span></a>
+										</div>
+										<div class="item-tab__objects">
+											<div class="item-tab__caption">Список курируемых адресов:</div>
+											<ol class="item-tab__list">
+												<li class="item-tab__item"> <a class="item-tab__link" href="#">Складской комплекс</a>
+													<div class="item-tab__address">2-ая Базовая ул., д.43</div>
+												</li>
+												<li class="item-tab__item"> <a class="item-tab__link" href="#">Торговое помещение</a>
+													<div class="item-tab__address">Бажова ул., д. 80</div>
+												</li>
+												<li class="item-tab__item"> <a class="item-tab__link" href="#">Производственно - торговый
+														компелкс</a>
+													<div class="item-tab__address">Бугурусланская ул., д, 64</div>
+												</li>
+												<li class="item-tab__item"> <a class="item-tab__link" href="#">ТК «Магнит»</a>
+													<div class="item-tab__address">Гагарина ул, 35</div>
+												</li>
+												<li class="item-tab__item"> <a class="item-tab__link" href="#">Торговое помещение</a>
+													<div class="item-tab__address">Гагарина ул., д.10</div>
+												</li>
+												<li class="item-tab__item"> <a class="item-tab__link" href="#">Торговое помещение</a>
+													<div class="item-tab__address">Горького ул., д. 60</div>
+												</li>
+											</ol>
+										</div>
+									</div>
+								</div>
+								<div class="item-tab__unit">
+									<div class="item-tab__image"> <img src="template/images/man02.webp" alt=""></div>
+									<div class="item-tab__info">
+										<div class="item-tab__head">
+											<div class="item-tab__name">Александр Кордюк</div><a class="item-tab__mail icons-mail"
+												href="mailto:a.kordyuk@tk-prospect.ru"> <span>a.kordyuk@tk-prospect.ru</span></a>
+										</div>
+										<div class="item-tab__objects">
+											<div class="item-tab__caption">Список курируемых адресов:</div>
+											<ol class="item-tab__list">
+												<li class="item-tab__item"> <a class="item-tab__link" href="#">Складской комплекс</a>
+													<div class="item-tab__address">2-ая Базовая ул., д.43</div>
+												</li>
+												<li class="item-tab__item"> <a class="item-tab__link" href="#">Торговое помещение</a>
+													<div class="item-tab__address">Бажова ул., д. 80</div>
+												</li>
+												<li class="item-tab__item"> <a class="item-tab__link" href="#">Производственно - торговый
+														компелкс</a>
+													<div class="item-tab__address">Бугурусланская ул., д, 64</div>
+												</li>
+												<li class="item-tab__item"> <a class="item-tab__link" href="#">ТК «Магнит»</a>
+													<div class="item-tab__address">Гагарина ул, 35</div>
+												</li>
+												<li class="item-tab__item"> <a class="item-tab__link" href="#">Торговое помещение</a>
+													<div class="item-tab__address">Гагарина ул., д.10</div>
+												</li>
+												<li class="item-tab__item"> <a class="item-tab__link" href="#">Торговое помещение</a>
+													<div class="item-tab__address">Горького ул., д. 60</div>
+												</li>
+											</ol>
+										</div>
+									</div>
+								</div>
+								<div class="item-tab__unit">
+									<div class="item-tab__image"> <img src="template/images/man03.webp" alt=""></div>
+									<div class="item-tab__info">
+										<div class="item-tab__head">
+											<div class="item-tab__name">Антон Дудкин</div><a class="item-tab__mail icons-mail"
+												href="mailto:arenda@tk-prospect.ru"> <span>arenda@tk-prospect.ru</span></a>
+										</div>
+										<div class="item-tab__objects">
+											<div class="item-tab__caption">Список курируемых адресов:</div>
+											<ol class="item-tab__list">
+												<li class="item-tab__item"> <a class="item-tab__link" href="#">Складской комплекс</a>
+													<div class="item-tab__address">2-ая Базовая ул., д.43</div>
+												</li>
+												<li class="item-tab__item"> <a class="item-tab__link" href="#">Торговое помещение</a>
+													<div class="item-tab__address">Бажова ул., д. 80</div>
+												</li>
+												<li class="item-tab__item"> <a class="item-tab__link" href="#">Производственно - торговый
+														компелкс</a>
+													<div class="item-tab__address">Бугурусланская ул., д, 64</div>
+												</li>
+												<li class="item-tab__item"> <a class="item-tab__link" href="#">ТК «Магнит»</a>
+													<div class="item-tab__address">Гагарина ул, 35</div>
+												</li>
+												<li class="item-tab__item"> <a class="item-tab__link" href="#">Торговое помещение</a>
+													<div class="item-tab__address">Гагарина ул., д.10</div>
+												</li>
+												<li class="item-tab__item"> <a class="item-tab__link" href="#">Торговое помещение</a>
+													<div class="item-tab__address">Горького ул., д. 60</div>
+												</li>
+											</ol>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container container">
+				<div class="footer__body">
+					<div class="footer__contacts"> <a class="footer__logo logo" href="index.html">
+							<div class="logo__image"><img src="template/images/logo.svg" alt=""></div>
+							<div class="logo__text"><img src="template/images/logo-text.svg" alt=""></div>
+						</a>
+						<div class="footer__paragraphs">
+							<p>© 2021 ООО «Проспект»</p>
+							<p>454092, г. Челябинск, ул. Курчатова, 6, корп. Б, офис 306</p>
+							<p> <a href="tel:+73512190019">+7 (351) 219 00 19 </a>(тел.)</p>
+							<p> <a href="mailto:mail@tk-prospect.ru">mail@tk-prospect.ru</a></p>
+						</div>
+					</div>
+					<div class="footer__row">
+						<div class="footer__column">
+							<div class="footer__heading">АРЕНДАТОРАМ</div>
+							<ul class="footer__list">
+								<li> <a href="#">Объекты в аренду</a></li>
+								<li> <a href="#">Реклама в торговых комплексах</a></li>
+								<li> <a href="#">Менеджеры объектов</a></li>
+							</ul>
+						</div>
+						<div class="footer__column">
+							<div class="footer__heading">ПОКУПАТЕЛЯМ</div>
+							<ul class="footer__list">
+								<li> <a href="#">Объекты на карте</a></li>
+								<li> <a href="#">Активности</a></li>
+								<li> <a href="#">Голосование</a></li>
+							</ul>
+						</div>
+						<div class="footer__column">
+							<div class="footer__heading">О КОМПАНИИ</div>
+							<ul class="footer__list">
+								<li> <a href="#">История</a></li>
+								<li> <a href="#">Компетенции</a></li>
+								<li> <a href="#">Отличительные особенности работы</a></li>
+								<li> <a href="#">Якорные арендаторы</a></li>
+								<li> <a href="#">Объекты</a></li>
+								<li> <a href="#">Управляющая компания ООО «Содействие»</a></li>
+							</ul>
+						</div>
+						<div class="footer__column">
+							<div class="footer__heading">НОВОСТИ</div>
+							<ul class="footer__list">
+								<li> <a href="#">Новости и аналитика ООО Проспект</a></li>
+								<li> <a href="#">Полезные статьи</a></li>
+								<li> <a href="#">Активности</a></li>
+								<li> <a href="#">Мероприятия</a></li>
+							</ul>
+						</div>
+						<div class="footer__column">
+							<div class="footer__heading">ПОДРЯДЧИКАМ</div>
+							<ul class="footer__list">
+								<li> <a href="#">Информация для подрядчиков</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div class="scroll-top lock-padding">
+		<div class="scroll-top__body">
+			<button class="scroll-top__button icons-arrow-scroll-top" type="button" id="scroll-top-btn"></button>
+		</div>
+	</div>
+	<section class="popup" id="popup-request">
+		<div class="popup__body">
+			<div class="popup__content"> <a class="popup__close icons-cross close-popup" href="#"></a>
+				<h3 class="popup__heading heading">Оставьте заявку</h3>
+				<div class="popup__text">И мы с вами свяжемся</div>
+				<form class="popup__form form validation-form" action="#">
+					<div class="form__inputs">
+						<label class="form__label"><span>Ваше имя *</span>
+							<input class="form__input validation-name" type="text" placeholder="Введите имя" name="name"
+								id="popup-name">
+						</label>
+						<label class="form__label"><span>E-mail</span>
+							<input class="form__input" type="email" placeholder="Введите e-mail" name="email" id="popup-email">
+						</label>
+						<label class="form__label"><span>Телефон *</span>
+							<input class="form__input validation-phone" type="tel" placeholder="Введите телефон" name="phone"
+								id="popup-phone">
+						</label>
+						<label class="form__label"><span>Адрес</span>
+							<input class="form__input" list="popup-address-list" type="text" placeholder="Введите адрес"
+								name="address" id="popup-address">
+							<datalist id="popup-address-list">
+								<option value="Проспект Победы, 10-200"></option>
+								<option value="Комсомольский Проспект, 114"></option>
+								<option value="40-летия Победы, 10-117"></option>
+								<option value="Куйбышева, 30"></option>
+								<option value="Ленина, 1"></option>
+								<option value="Орджоникидзе, 2"></option>
+								<option value="Проспект Победы, 1-200"></option>
+								<option value="Комсомольский Проспект, 14"></option>
+								<option value="40-летия Победы, 10-11"></option>
+								<option value="Куйбышева, 3"></option>
+								<option value="Ленина, 15"></option>
+								<option value="Орджоникидзе, 24"></option>
+							</datalist>
+						</label>
+						<label class="form__label form__label--textarea"><span>Сообщение</span>
+							<textarea class="form__input" placeholder="Текст сообщения" name="message" id="popup-message"></textarea>
+						</label>
+					</div>
+					<div class="form__alert validation-alert">Для отправки формы требуется дать согласие на обработку данных и
+						заполнить все поля, отмеченные звездочкой *.</div>
+					<div class="form__bottom">
+						<div class="form__left">
+							<div class="form__checkbox checkbox">
+								<input class="checkbox__input validation-checkbox" type="checkbox" name="popup-agreement"
+									id="popup-agreement" checked>
+								<label class="checkbox__label validation-label" for="popup-agreement" tabindex="0"><span>Согласен на <a
+											href="#">обработку персональных данных</a>, указанных в заявке </span></label>
+							</div>
+							<div class="form__note">* — обязательные поля</div>
+						</div>
+						<div class="form__right">
+							<button class="form__btn btn btn--orange" type="submit">оставить заявку</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"> </script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&amp;lang=ru_RU"> </script>
+	<script src="template/scripts/index.js"> </script>
+</body>
+
+</html>
